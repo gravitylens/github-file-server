@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  git-cifs-server:
+    build: .
+    container_name: git-cifs-server
+    ports:
+      - "0.0.0.0:445:445"
+    tmpfs:
+      - /srv/gitrepo
+    restart: always
