@@ -7,6 +7,3 @@ services:
       - GIT_REPO_URL=https://github.com/gravitylens/DrinkRecipes.git
     ports:
       - "445:445"
-    # Add volumes if you want to persist data or config
-    # volumes:
-    #   - ./data:/srv/gitrepo
