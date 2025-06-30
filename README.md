@@ -1,2 +1,4 @@
-## file-server
-This docker container will clone a specific github repository and serve it up at a CIFS share.  We can us this to create a file share within the environment that we can manage externally.
+# github-file-server
+At every restart this container will clone the contents of a specified github repository and server the contents of those file as a CIFS share.  This is a simple way to create a file repository in a training environments that can be managed centrally.
+
+
