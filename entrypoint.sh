@@ -3,7 +3,7 @@ set -e
 
 mkdir -p /srv/gitrepo
 rm -rf /tmp/gitclone
-git clone --depth=1 https://github.com/gravitylens/DrinkRecipes.git /tmp/gitclone
+git clone --depth=1 "${GIT_REPO_URL}" /tmp/gitclone
 rm -rf /srv/gitrepo/*
 cp -r /tmp/gitclone/* /srv/gitrepo/
 
