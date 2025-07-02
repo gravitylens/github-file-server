@@ -17,7 +17,7 @@ cat >/etc/samba/smb.conf <<EOF
 
 [share]
    path = /srv/gitrepo
-   read only = yes
+   read only = no
    guest ok = yes
 EOF
 
