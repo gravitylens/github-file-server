@@ -7,6 +7,10 @@ git clone --depth=1 "${GIT_REPO_URL}" /tmp/gitclone
 rm -rf /srv/gitrepo/*
 cp -r /tmp/gitclone/* /srv/gitrepo/
 
+# Set permissions for guest access
+chown -R nobody:nogroup /srv/gitrepo
+chmod -R 0777 /srv/gitrepo
+
 # Create samba config file
 cat >/etc/samba/smb.conf <<EOF
 [global]
