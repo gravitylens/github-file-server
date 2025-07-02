@@ -1,8 +1,9 @@
 services:
-  github-file-server:
+  file-server:
+    container_name: file-server
     build: .
     restart: unless-stopped
     environment:
-      - GIT_REPO_URL=https://github.com/gravitylens/DrinkRecipes.git
+      - GIT_REPO_URL=${GIT_REPO_URL}
     ports:
       - "445:445"

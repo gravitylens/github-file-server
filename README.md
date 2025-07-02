@@ -21,3 +21,16 @@ If necessary allow SMB on the local firewall.
 sudo ufw allow 445/tcp
 ```
 
+## Setup
+
+1. **Create a `.env` file in the project root with the following content:**
+   ```
+   GIT_REPO_URL=https://github.com/your/repo.git
+   ```
+   Replace the URL with your desired Git repository.
+
+2. **Build and start the service:**
+   ```
+   docker compose up --build
+   ```
+
