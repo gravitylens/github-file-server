@@ -5,5 +5,7 @@ services:
     restart: unless-stopped
     environment:
       - GIT_REPO_URL=${GIT_REPO_URL}
+      - SAMBA_USER=${SAMBA_USER}
+      - SAMBA_PASS=${SAMBA_PASS}
     ports:
       - "445:445"
