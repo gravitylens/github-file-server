@@ -8,4 +8,4 @@ services:
       - SAMBA_USER=${SAMBA_USER}
       - SAMBA_PASS=${SAMBA_PASS}
     ports:
-      - "192.168.10.1:445:445"
+      - "${BIND_IP}:445:445"
