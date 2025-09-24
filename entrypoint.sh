@@ -9,9 +9,12 @@ cp -r /tmp/gitclone/* /srv/gitrepo/
 
 # Create a Samba user (using environment variables for flexibility)
 if [[ -n "${SAMBA_USER}" && -n "${SAMBA_PASS}" ]]; then
-    useradd -M -s /sbin/nologin "${SAMBA_USER}"
+    if ! id "${SAMBA_USER}" &>/dev/null; then
+        useradd -M -s /sbin/nologin "${SAMBA_USER}"
+    fi
     echo -e "${SAMBA_PASS}\n${SAMBA_PASS}" | smbpasswd -a -s "${SAMBA_USER}"
 fi
+
 # Set permissions for guest access
 chown -R nobody:nogroup /srv/gitrepo
 chmod -R 0777 /srv/gitrepo
