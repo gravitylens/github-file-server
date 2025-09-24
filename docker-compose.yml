@@ -9,3 +9,5 @@ services:
       - SAMBA_PASS=${SAMBA_PASS}
     ports:
       - "${BIND_IP}:445:445"
+    volumes:
+      - ./ssh:/root/.ssh
