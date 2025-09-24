@@ -10,4 +10,4 @@ services:
     ports:
       - "${BIND_IP}:445:445"
     volumes:
-      - ./ssh:/root/.ssh
+      - ./.ssh:/root/.ssh
