@@ -31,7 +31,6 @@ cat >/etc/samba/smb.conf <<EOF
    path = /srv/gitrepo
    read only = no
    guest ok = yes
-   valid users = ${SAMBA_USER}
 EOF
 
 # Start Samba services (daemon mode)
