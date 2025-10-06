@@ -3,8 +3,6 @@ services:
     container_name: file-server
     build: .
     restart: unless-stopped
-    volumes:
-      - ./ssh:/root/.ssh
     environment:
       - GIT_REPO_URL=${GIT_REPO_URL}
       - SAMBA_USER=${SAMBA_USER}
